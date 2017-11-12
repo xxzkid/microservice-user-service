@@ -13,6 +13,7 @@ public class HomeController {
     @RequestMapping(value = {"/", "/index"})
     public Map<String, Object> index() {
         Map<String,Object> map = Maps.newHashMap();
+        map.put("key", "hello spring cloud, docker");
         return map; 
     }
 
