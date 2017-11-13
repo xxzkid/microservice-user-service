@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.xxz</groupId>
 	<artifactId>microservice-user-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -29,6 +29,7 @@
 		<java.version>1.8</java.version>
 		<spring-cloud-bom.version>Dalston.SR1</spring-cloud-bom.version>
 		<docker.image.prefix>springcloud</docker.image.prefix>
+	    <docker.host>http://192.168.1.102:2375</docker.host>
 	</properties>
 
 
@@ -59,13 +60,13 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.12</version>
 				<configuration>
-					<dockerHost>http://192.168.1.102:2375</dockerHost>
+					<dockerHost>${docker.host}</dockerHost>
 					<!-- 注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
 					<!-- 详见：https://github.com/spotify/docker-maven-plugin Invalid repository 
 						name ... only [a-z0-9-_.] are allowed -->
 					<imageName>${project.artifactId}</imageName>
-					<!-- 指定Dockerfile所在的路径 -->
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<baseImage>java:8</baseImage>
+					<entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
