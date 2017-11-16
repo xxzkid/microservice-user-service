@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.xxz</groupId>
 	<artifactId>microservice-user-service</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -14,7 +14,7 @@
 		<connection>scm:git:https://github.com/xxzkid/microservice-user-service.git</connection>
 		<developerConnection>scm:git:https://github.com/xxzkid/microservice-user-service.git</developerConnection>
 		<url>https://github.com/xxzkid/microservice-user-service/tree/master</url>
-		<tag>microservice-user-service-0.0.2</tag>
+		<tag>microservice-user-service-0.0.3</tag>
 	</scm>
 
 	<dependencyManagement>
