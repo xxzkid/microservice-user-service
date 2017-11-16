@@ -29,3 +29,7 @@ target/
 # system ignore
 .DS_Store
 Thumbs.db
+
+# release plugin
+pom.xml.releaseBackup
+release.properties
