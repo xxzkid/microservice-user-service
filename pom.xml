@@ -87,6 +87,7 @@
 					</imageTags>
 				</configuration>
 			</plugin>
+			<!-- mvn release:clean release:prepare -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
