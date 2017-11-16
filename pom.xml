@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.xxz</groupId>
 	<artifactId>microservice-user-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -15,7 +14,8 @@
 		<connection>scm:git:https://github.com/xxzkid/microservice-user-service.git</connection>
 		<developerConnection>scm:git:https://github.com/xxzkid/microservice-user-service.git</developerConnection>
 		<url>https://github.com/xxzkid/microservice-user-service/tree/master</url>
-	</scm>
+	  <tag>microservice-user-service-0.0.1</tag>
+  </scm>
 
 	<dependencyManagement>
 		<dependencies>
@@ -87,16 +87,10 @@
 					</imageTags>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-scm-plugin</artifactId> 
-				<version>1.9.5</version> <configuration> <connectionType>developerConnection</connectionType> 
-				</configuration> </plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
-				<configuration>
-					<checkModificationExcludeList>.project,.classpath</checkModificationExcludeList>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
